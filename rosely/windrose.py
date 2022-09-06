@@ -269,7 +269,7 @@ class WindRose(object):
             self.out_file = out_file
         elif output_type == 'show':
             st.plotly_chart(fig)
-            img_bytes2 = fig.to_image(format = "png", width=900, height=900)
+            img_bytes2 = fig.to_image(format = "png", width=900, height=900, scale = 5)
             return img_bytes2
         elif output_type == 'return':
             return fig
