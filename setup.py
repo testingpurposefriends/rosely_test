@@ -10,7 +10,8 @@ with io.open("rosely/__init__.py", "rt", encoding="utf8") as f:
 requires = [
     'numpy',
     'pandas>=0.24',
-    'plotly'
+    'plotly', 
+    'streamlit==1.12.0'
 ]
 
 tests_require = ['pytest']

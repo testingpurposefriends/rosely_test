@@ -7,3 +7,4 @@ dependencies:
   - pandas
   - plotly
   - python>=3.7
+  - streamlit==1.12.0
