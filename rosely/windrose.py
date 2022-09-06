@@ -9,6 +9,7 @@ import pandas as pd
 import plotly.express as px
 from plotly.offline import plot
 import plotly.io as pio
+import streamlit as st
 
 class WindRose(object):
     """
@@ -267,7 +268,9 @@ class WindRose(object):
             pio.write_html(fig, str(out_file), auto_open=False)
             self.out_file = out_file
         elif output_type == 'show':
-            fig.show()
+            st.plotly_chart(fig)
+            img_bytes2 = fig.to_image(format = "png", width=900, height=900)
+            return img_bytes2
         elif output_type == 'return':
             return fig
 
