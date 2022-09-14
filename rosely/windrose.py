@@ -57,7 +57,7 @@ class WindRose(object):
             raise TypeError("Must assign a pandas.DataFrame object")
         self._df = df
 
-    def calc_stats(self, normed=True, bins=[0,3,6,9,12,15,50], variable_names=None):
+    def calc_stats(self, normed=True, bins=[0,3,7,11,15,20,50], variable_names=None):
         """
         Calculate wind speed and direction bins needed for generating wind rose
         diagrams. 
@@ -116,7 +116,7 @@ class WindRose(object):
         wind = wind.replace([np.inf, -np.inf], np.nan).dropna(
              subset=["ws", "wd"], how="any"
         )
-        labels = ['0 - 3 m/s', '4 - 6 m/s', '7 - 9 m/s', '10 - 12 m/s', '13 - 15 m/s', '>15 m/s']
+        labels = ['0 - 3 m/s', '3 - 7 m/s', '7 - 11 m/s', '11 - 15 m/s', '15 - 20 m/s', '>20 m/s']
         spd_bins = pd.cut(wind.ws, bins=bins, labels=labels, include_lowest=True)
         spd_bins.name = 'spd_bins'
         wind = wind.join(spd_bins)
