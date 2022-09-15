@@ -4,7 +4,7 @@ A small package for efficiently generating customizable and interactive wind ros
 
 __name__ = 'rosely_jesh'
 __author__ = 'John Volk'
-__version__ = '0.0.3.post5'
+__version__ = '0.0.3.post6'
 
 
 from rosely.windrose import WindRose
