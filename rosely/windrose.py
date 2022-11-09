@@ -251,5 +251,8 @@ class WindRose(object):
             st.plotly_chart(fig)
             img_bytes2 = fig.to_image(format = "png", width=900, height=900, scale = 3)
             return img_bytes2
+        elif output_type == 'svg':
+            img_bytes3 = fig.to_image(format = "png", width=900, height=900, scale = 1)
+            return img_bytes3
         elif output_type == 'return':
             return fig
