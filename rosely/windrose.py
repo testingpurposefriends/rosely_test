@@ -57,7 +57,7 @@ class WindRose(object):
             raise TypeError("Must assign a pandas.DataFrame object")
         self._df = df
 
-    def calc_stats(self, normed=True, bins=[0,4,8,12,16,20,50], variable_names=None):
+    def calc_stats(self, normed=False, bins=[0,4,8,12,16,20,50], variable_names=None):
         """
         Calculate wind speed and direction bins needed for generating wind rose
         diagrams. 
